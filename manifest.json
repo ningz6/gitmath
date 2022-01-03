@@ -21,6 +21,9 @@
             "js": [
                 "content.js"
             ],
+            "css": [
+                "numbering.css"
+            ],
             "run_at": "document_end"
         }
     ],
