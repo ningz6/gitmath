@@ -18,7 +18,7 @@ h5 {
   counter-reset: h6;
 }
 
-h2::before {
+article h2::before {
   display: inline;
 
   counter-increment: h2;
@@ -27,7 +27,7 @@ h2::before {
   margin-right: 0.5em;
 }
 
-h3::before {
+article h3::before {
   display: inline;
 
   counter-increment: h3;
@@ -36,7 +36,7 @@ h3::before {
   margin-right: 0.5em;
 }
 
-h4::before {
+article h4::before {
   display: inline;
 
   counter-increment: h4;
@@ -45,7 +45,7 @@ h4::before {
   margin-right: 0.5em;
 }
 
-h5::before {
+article h5::before {
   display: inline;
 
   counter-increment: h5;
@@ -54,7 +54,7 @@ h5::before {
   margin-right: 0.5em;
 }
 
-h6::before {
+article h6::before {
   display: inline;
 
   counter-increment: h6;
