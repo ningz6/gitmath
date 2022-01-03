@@ -16,6 +16,8 @@ A chrome extension for rendering Github math equations, based on [MathJax](https
 
 ## Multi-line math
 
+Here we use _math code block_ as display math delimiters, that's because Github markdown parser will escape `\\`.
+
 - Input
 
   <pre>
@@ -36,6 +38,22 @@ A chrome extension for rendering Github math equations, based on [MathJax](https
   7x - 2y + 4z \\
   -6x + 3y + 2z
   \end{cases}
+  ```
+
+## `repl.py`
+
+Usually, we use _double dollar_ signs as display math delimiters, but you can use `repl.py` to replace them with _math code block_, and vice versa.
+
+- double dollar to math code block
+
+  ```console
+  python repl.py in.md out.md
+  ```
+
+- math code block to double dollar
+
+  ```console
+  python repl.py -r in.md out.md
   ```
 
 ## Examples
