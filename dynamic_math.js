@@ -21,6 +21,7 @@ document.addEventListener("pjax:end", function () {
 
   MathJax.typesetPromise()
     .then(() => {
+      MathJax.texReset();
       MathJax.typesetPromise();
     })
     .catch((err) => console.log(err.message));
