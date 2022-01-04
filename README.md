@@ -2,7 +2,15 @@
 
 A chrome extension for rendering Github math equations, based on [MathJax](https://www.mathjax.org/).
 
-## Inline math
+## Features
+
+- Insert a table of contents
+- Numbering Heading
+- Render math equations
+
+## Math
+
+### Inline math
 
 - Input
 
@@ -14,7 +22,7 @@ A chrome extension for rendering Github math equations, based on [MathJax](https
 
   $f(a)=\frac{1}{2\pi i}\oint_y \frac{f(z)}{z-a}dz$
 
-## Multi-line math
+### Multi-line math
 
 Here we use _math code block_ as display math delimiters, that's because Github markdown parser will escape `\\`.
 
@@ -40,7 +48,7 @@ Here we use _math code block_ as display math delimiters, that's because Github 
   \end{cases}
   ```
 
-## `repl.py`
+### `repl.py`
 
 Usually, we use _double dollar_ signs as display math delimiters, but you can use `repl.py` to replace them with _math code block_, and vice versa.
 
@@ -56,7 +64,7 @@ Usually, we use _double dollar_ signs as display math delimiters, but you can us
   python repl.py -r in.md out.md
   ```
 
-## Examples
+### Examples
 
 - Without gitmath
 
