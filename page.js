@@ -71,17 +71,14 @@ function add_toc() {
   }
 
   for (let i = 0; i < headings.length; ++i) {
-    let flag = true;
+    let parent = toc;
     for (let j = i - 1; j >= 0; --j) {
       if (headings[j].tagName < headings[i].tagName) {
-        parents[j].append(nodes[i]);
-        flag = false;
+        parent = parents[j];
         break;
       }
     }
-    if (flag) {
-      toc.append(nodes[i]);
-    }
+    parent.append(nodes[i]);
   }
 }
 
