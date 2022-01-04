@@ -1,5 +1,7 @@
-import re
+# https://github.com/goessner/markdown-it-texmath/blob/master/texmath.js
+
 import argparse
+import re
 
 parser = argparse.ArgumentParser()
 parser.add_argument(
@@ -15,7 +17,7 @@ def double_dollar_2_math_block(s):
         content = match.group(2).strip()
         return "```math\n{}\n```".format(content)
 
-    pattern = re.compile(r"(\$\$(.*?)\$\$)", re.DOTALL)
+    pattern = re.compile(r"([$]{2}([^$]*?[^\\])[$]{2})")
     return pattern.sub(repl, s)
 
 
@@ -24,7 +26,7 @@ def math_block_2_double_dollar(s):
         content = match.group(2).strip()
         return "$$\n{}\n$$".format(content)
 
-    pattern = re.compile("(```math\n(.*?)```)", re.DOTALL)
+    pattern = re.compile(r"(`{3}math\s*([^`]*?)\s*`{3})")
     return pattern.sub(repl, s)
 
 
