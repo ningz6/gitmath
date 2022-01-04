@@ -49,7 +49,7 @@ function add_toc() {
     li.style.listStyleType = "disc";
 
     let a = document.createElement("a");
-    a.href = "#" + heading.firstChild.id;
+    a.href = heading.firstChild.href;
     a.textContent = heading.textContent;
     li.append(a);
 
