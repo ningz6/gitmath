@@ -32,10 +32,10 @@ function add_toc() {
 
   let toc = document.createElement("ul");
   toc.id = "toc";
-  toc.style.border = "5px #d0d7de solid";
+  toc.style.backgroundColor = "#f6f8fa";
   toc.style.borderRadius = "10px";
   toc.style.padding = "1em";
-  toc.style.paddingLeft = "2em";
+  toc.style.paddingLeft = "3em";
 
   h1.after(toc);
 
