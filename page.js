@@ -76,9 +76,6 @@ function add_toc() {
       if (headings[j].tagName < headings[i].tagName) {
         parents[j].append(nodes[i]);
         flag = false;
-        console.log("-------");
-        console.log(headings[i].textContent);
-        console.log(headings[j].textContent);
         break;
       }
     }
