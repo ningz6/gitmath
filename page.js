@@ -19,14 +19,16 @@ function add_toc() {
   }
 
   let article = document.querySelector("article");
-  let headings = article.querySelectorAll("h2, h3, h4, h5, h6");
+  if (!article) {
+    return;
+  }
 
+  let headings = article.querySelectorAll("h2, h3, h4, h5, h6");
   if (headings.length == 0) {
     return;
   }
 
   let toc = document.createElement("ul");
-  toc.dir = "auto";
   toc.id = "toc";
   toc.style.backgroundColor = "#f6f8fa";
   toc.style.borderRadius = "10px";
@@ -51,11 +53,11 @@ function add_toc() {
     let a = document.createElement("a");
     a.href = heading.firstChild.href;
     a.textContent = heading.textContent;
+
     li.append(a);
 
     if (i < headings.length - 1 && heading.tagName < headings[i + 1].tagName) {
       let ul = document.createElement("ul");
-      ul.dir = "auto";
       li.append(ul);
       parents.push(ul);
     } else {
@@ -76,16 +78,11 @@ function add_toc() {
     for (let j = i - 1; j >= 0; --j) {
       if (headings[j].tagName < headings[i].tagName) {
         parent = parents[j];
-        console.log("----------");
-        console.log(headings[i].textContent);
-        console.log(headings[j].textContent);
         break;
       }
     }
     parent.append(nodes[i]);
   }
-
-  console.log(nodes);
 }
 
 add_toc();
