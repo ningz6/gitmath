@@ -49,7 +49,7 @@ function add_toc() {
     li.style.listStyleType = "disc";
 
     let a = document.createElement("a");
-    a.setAttribute("href", "#toc" + i);
+    a.href = "#" + heading.firstChild.id;
     a.textContent = heading.textContent;
     li.append(a);
 
@@ -62,16 +62,12 @@ function add_toc() {
     }
     nodes.push(li);
 
-    let anchor_before = document.createElement("a");
-    anchor_before.id = "toc" + i;
-    heading.parentNode.insertBefore(anchor_before, heading);
-
-    let anchor_after = document.createElement("a");
-    anchor_after.href = "#toc";
-    anchor_after.textContent = "  \u25B2";
-    anchor_after.className = "to-toc";
-    anchor_after.title = "go to Table of Content";
-    heading.append(anchor_after);
+    let anchor = document.createElement("a");
+    anchor.href = "#readme";
+    anchor.textContent = "  \u25B2";
+    anchor.className = "to-toc";
+    anchor.title = "go to Table of Content";
+    heading.append(anchor);
   }
 
   for (let i = 0; i < headings.length; ++i) {
