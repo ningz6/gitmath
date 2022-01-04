@@ -6,10 +6,10 @@ function include_script(src) {
 
 let config = chrome.runtime.getURL("mathjax_config.js");
 let mathjax = chrome.runtime.getURL("node_modules/mathjax/es5/tex-svg.js");
-let dynamic_math = chrome.runtime.getURL("dynamic_math.js");
+let page = chrome.runtime.getURL("page.js");
 
 console.log("MathJax for Github: " + "https://github.com/ningz6/gitmath");
 
 include_script(config);
 include_script(mathjax);
-include_script(dynamic_math);
+include_script(page);

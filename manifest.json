@@ -8,7 +8,7 @@
         "https://gist.github.com/*"
     ],
     "web_accessible_resources": [
-        "dynamic_math.js",
+        "page.js",
         "mathjax_config.js",
         "node_modules/*"
     ],
