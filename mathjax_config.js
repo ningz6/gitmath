@@ -4,7 +4,7 @@ window.MathJax = {
       ["$", "$"],
       ["\\(", "\\)"],
     ],
-    tags: "ams",
+    tags: "all",
   },
   svg: {
     fontCache: "global",

@@ -7,8 +7,7 @@ function parse_math() {
       pre.childNodes[0].tagName == "CODE"
     ) {
       let p = document.createElement("p");
-      p.innerText =
-        "\\begin{equation}" + pre.childNodes[0].innerText + "\\end{equation}";
+      p.innerText = "$$\n" + pre.childNodes[0].innerText + "\n$$";
       pre.replaceWith(p);
     }
   }
