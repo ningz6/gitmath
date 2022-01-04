@@ -5,7 +5,7 @@ A chrome extension for rendering Github math equations, based on [MathJax](https
 ## Features
 
 - Insert a table of contents
-- Numbering Heading
+- Numbering headings
 - Render math equations
 
 ## Math
