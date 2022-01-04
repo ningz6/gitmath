@@ -1,6 +1,6 @@
 # gitmath
 
-A chrome extension for rendering Github math equations, based on [MathJax](https://www.mathjax.org/).
+A Chrome extension for rendering Github math equations, based on [MathJax](https://www.mathjax.org/).
 
 ## Features
 
