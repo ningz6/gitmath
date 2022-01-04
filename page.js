@@ -65,12 +65,12 @@ function add_toc() {
     }
     nodes.push(li);
 
-    let anchor = document.createElement("a");
-    anchor.href = "#readme";
-    anchor.textContent = "  \u25B2";
-    anchor.className = "to-toc";
-    anchor.title = "go to Table of Content";
-    heading.append(anchor);
+    // let anchor = document.createElement("a");
+    // anchor.href = "#readme";
+    // anchor.textContent = "  \u25B2";
+    // anchor.className = "to-toc";
+    // anchor.title = "go to Table of Content";
+    // heading.append(anchor);
   }
 
   for (let i = 0; i < headings.length; ++i) {
