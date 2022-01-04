@@ -14,7 +14,13 @@ function parse_math() {
   }
 }
 
+let toc_cache = new Set();
+
 function add_toc() {
+  if (toc_cache.has(location.href)) {
+    return;
+  }
+  toc_cache.add(location.href);
   let h1 = document.querySelector("article h1");
   if (!h1) {
     return;
