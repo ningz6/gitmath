@@ -14,14 +14,10 @@ function parse_math() {
   }
 }
 
-let toc_cache = new Set();
-
 function add_toc() {
-  let uri = location.href.split("#")[0];
-  if (toc_cache.has(uri)) {
+  if (document.getElementById("toc")) {
     return;
   }
-  toc_cache.add(uri);
 
   let h1 = document.querySelector("article h1");
   if (!h1) {
