@@ -7,7 +7,7 @@ import re
 
 parser = argparse.ArgumentParser()
 parser.add_argument(
-    "--gitlab", action="store_true", help="use Gitlab math delimiters"
+    "--gitlab", action="store_true", help="use Gitlab formula delimiters"
 )
 parser.add_argument("file", type=str, help="input markdown filename")
 parser.add_argument("out", type=str, help="output markdown filename")
@@ -49,7 +49,7 @@ def gitlab_to_dollars(s):
 
 
 if __name__ == "__main__":
-    M = gitlab_to_dollars if args.gitlab else dollars_to_gitlab
+    M = dollars_to_gitlab if args.gitlab else gitlab_to_dollars
 
     with open(args.file) as f:
         s = f.read()

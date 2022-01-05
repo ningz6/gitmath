@@ -37,13 +37,13 @@ You can use `repl.py` for formula delimiters conversion.
 - Dollars to Gitlab
 
   ```console
-  python repl.py in.md out.md
+  python repl.py --gitlab in.md out.md
   ```
 
 - Gitlab to Dollars
 
   ```console
-  python repl.py --gitlab in.md out.md
+  python repl.py in.md out.md
   ```
 
 ## References
