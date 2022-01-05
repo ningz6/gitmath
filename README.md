@@ -15,7 +15,7 @@ Due to the [backslash escaping problem](https://docs.github.com/en/github/writin
 ### Inline math
 
 <pre>
-$`f(a)=\frac{1}{2\pi i}\oint_y \frac{f(z)}{z-a}dz`$.
+$`f(a)=\frac{1}{2\pi i}\oint_y \frac{f(z)}{z-a}dz`$
 </pre>
 
 ### Display math
