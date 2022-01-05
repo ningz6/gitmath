@@ -11,6 +11,22 @@ function parse_math() {
       pre.replaceWith(p);
     }
   }
+
+  let codes = document.querySelectorAll("code");
+  for (let code of codes) {
+    if (
+      code.previousSibling &&
+      code.previousSibling.nodeType == 3 &&
+      code.previousSibling.nodeValue == "$" &&
+      code.nextSibling &&
+      code.nextSibling.nodeType == 3 &&
+      code.nextSibling.nodeValue == "$" &&
+      code.childNodes.length == 1 &&
+      code.firstChild.nodeType == 3
+    ) {
+      code.replaceWith(document.createTextNode(code.innerText));
+    }
+  }
 }
 
 function add_toc() {

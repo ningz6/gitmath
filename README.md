@@ -10,70 +10,43 @@ A Chrome extension for rendering Github math equations, based on [MathJax](https
 
 ## Math
 
+Due to the [backslash escaping problem](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#ignoring-markdown-formatting), we used the [Gitlab formula delimiters](https://docs.gitlab.com/ee/user/markdown.html#math).
+
 ### Inline math
 
-- Input
+<pre>
+$`$f(a)=\frac{1}{2\pi i}\oint_y \frac{f(z)}{z-a}dz$`$.
+</pre>
 
-  <pre>
-  $f(a)=\frac{1}{2\pi i}\oint_y \frac{f(z)}{z-a}dz$
-  </pre>
+### Display math
 
-- Output
+<pre>
+```math
+\begin{cases}
+3x + 5y +  z \\
+7x - 2y + 4z \\
+-6x + 3y + 2z
+\end{cases}
+```
+</pre>
 
-  $f(a)=\frac{1}{2\pi i}\oint_y \frac{f(z)}{z-a}dz$
+### Formula delimiters conversion
 
-### Multi-line math
+You can use `repl.py` for formula delimiters conversion.
 
-Here we use _math code block_ as display math delimiters, that's because Github markdown parser will escape `\\`.
-
-- Input
-
-  <pre>
-  ```math
-  \begin{cases}
-  3x + 5y +  z \\
-  7x - 2y + 4z \\
-  -6x + 3y + 2z
-  \end{cases}
-  ```
-  </pre>
-
-- Output
-
-  ```math
-  \begin{cases}
-  3x + 5y +  z \\
-  7x - 2y + 4z \\
-  -6x + 3y + 2z
-  \end{cases}
-  ```
-
-### `repl.py`
-
-Usually, we use _double dollar_ signs as display math delimiters, but you can use `repl.py` to replace them with _math code block_, and vice versa.
-
-- double dollar to math code block
+- Dollars to Gitlab
 
   ```console
   python repl.py in.md out.md
   ```
 
-- math code block to double dollar
+- Gitlab to Dollars
 
   ```console
-  python repl.py -r in.md out.md
+  python repl.py --gitlab in.md out.md
   ```
-
-### Examples
-
-- Without gitmath
-
-  ![Without gitmath](without-gitmath.png)
-
-- With gitmath
-
-  ![Without gitmath](with-gitmath.png)
 
 ## References
 
 - <https://github.com/orsharir/github-mathjax>
+- <https://github.com/goessner/markdown-it-texmath>

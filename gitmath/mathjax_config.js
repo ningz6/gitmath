@@ -11,5 +11,8 @@ window.MathJax = {
   },
   elements: ["math"],
   loader: { load: ["ui/lazy"] },
+  options: {
+    ignoreHtmlClass: "blob-code-content|code-list",
+  },
 };
 console.log("MathJax config loaded");
