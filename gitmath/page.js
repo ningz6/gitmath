@@ -14,13 +14,15 @@ function parse_math() {
 
   let codes = document.querySelectorAll("code");
   for (let code of codes) {
+    let prevSibling = code.previousSibling;
+    let nextSibling = code.nextSibling;
     if (
-      code.previousSibling &&
-      code.previousSibling.nodeType == 3 &&
-      code.previousSibling.nodeValue == "$" &&
-      code.nextSibling &&
-      code.nextSibling.nodeType == 3 &&
-      code.nextSibling.nodeValue == "$" &&
+      prevSibling &&
+      prevSibling.nodeType == 3 &&
+      prevSibling.nodeValue.slice(-1) == "$" &&
+      nextSibling &&
+      nextSibling.nodeType == 3 &&
+      nextSibling.nodeValue[0] == "$" &&
       code.childNodes.length == 1 &&
       code.firstChild.nodeType == 3
     ) {
