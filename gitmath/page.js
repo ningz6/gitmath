@@ -41,7 +41,9 @@ function add_toc() {
     return;
   }
 
-  let headings = article.querySelectorAll("h2, h3, h4, h5, h6");
+  let headings = article.querySelectorAll(
+    "h2:not([id='footnote-label']), h3, h4, h5, h6"
+  );
   if (headings.length == 0) {
     return;
   }
