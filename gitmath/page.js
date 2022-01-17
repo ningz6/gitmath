@@ -98,17 +98,16 @@ function add_toc() {
   }
 }
 
+function typeset() {
+  MathJax.texReset();
+  MathJax.typesetPromise();
+}
+
 add_toc();
 parse_math();
 
 document.addEventListener("pjax:end", function () {
   add_toc();
   parse_math();
-
-  MathJax.typesetPromise()
-    .then(() => {
-      MathJax.texReset();
-      MathJax.typesetPromise();
-    })
-    .catch((err) => console.log(err.message));
+  typeset();
 });
