@@ -2,23 +2,23 @@
   counter-reset: h2;
 }
 
-h2 {
+#readme h2 {
   counter-reset: h3;
 }
 
-h3 {
+#readme h3 {
   counter-reset: h4;
 }
 
-h4 {
+#readme h4 {
   counter-reset: h5;
 }
 
-h5 {
+#readme h5 {
   counter-reset: h6;
 }
 
-article h2::before {
+#readme article h2::before {
   display: inline;
 
   counter-increment: h2;
@@ -27,7 +27,7 @@ article h2::before {
   margin-right: 0.5em;
 }
 
-article h3::before {
+#readme article h3::before {
   display: inline;
 
   counter-increment: h3;
@@ -36,7 +36,7 @@ article h3::before {
   margin-right: 0.5em;
 }
 
-article h4::before {
+#readme article h4::before {
   display: inline;
 
   counter-increment: h4;
@@ -45,7 +45,7 @@ article h4::before {
   margin-right: 0.5em;
 }
 
-article h5::before {
+#readme article h5::before {
   display: inline;
 
   counter-increment: h5;
@@ -54,7 +54,7 @@ article h5::before {
   margin-right: 0.5em;
 }
 
-article h6::before {
+#readme article h6::before {
   display: inline;
 
   counter-increment: h6;

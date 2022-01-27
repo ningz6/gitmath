@@ -36,7 +36,7 @@ function add_toc() {
     return;
   }
 
-  let article = document.querySelector("article");
+  let article = document.querySelector("#readme article");
   if (!article) {
     return;
   }
