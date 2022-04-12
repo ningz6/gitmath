@@ -50,6 +50,7 @@ function add_toc() {
 
   let toc = document.createElement("ul");
   toc.id = "toc";
+  toc.style.textAlign = "left";
   toc.style.backgroundColor = "#f6f8fa";
   toc.style.borderRadius = "10px";
   toc.style.padding = "1em";
